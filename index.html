@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TKoL | Squat Classifier</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="images/logo.png" type="image/png" />
+</head>
+<body>
+  <h1>The King of Limbs | Squat Classifier </h1>
+  <p>This project is a squat classifier developed for AML Lab and AML Devices subjects for cohort 2024-2025 at Imperial College London.</p>
+
+  <p>Team members:</p>
+  <ul>
+    <li>Avalos Garcia, Salvador</li>
+    <li>Cui, Endong</li>
+    <li>Yang, Hongjoon</li>
+  </ul>
+
+  <div style="text-align: justify;">
+    <p>
+      This project describes the design, implementation and evaluation of an IMU-based deep squat classification system designed to improve lower body performance during deep squatting and effectively reduce the risk of injury to trainers. The wearable device for this project consists of five IMU sensors, and a microcontroller unit (Arduino) equipped with a heart rate sensor, an OLED display, which together provide real-time feedback on squatting posture. The project followed a standardized data collection protocol, with a total of 1,080 squat samples (Simple, Narrow, and Plie) collected from 10 participants, which were then pre-processed (normalization, padding and interpolation) to ensure consistency of the data and to facilitate the training of the ensuing machine learning model.
+    </p>
+  
+    <p>
+      Three machine learning models were assessed to classify squat movements: Support Vector Machine (SVM), Long Short-Term Memory (LSTM), and a Transformer Deep Learning model. The SVM model, optimized via Grid Search, achieved a best cross-validation accuracy of 67.5%, highlighting the challenges of non-linear time-series data. In contrast, the LSTM model attained 38.42% accuracy, while the Transformer model obtained 78.83%. Visualization methods such as PCA and confusion matrix revealed significant feature overlap in the data for this project, with the simple squat being particularly prone to misclassification due to similarity to narrow squat.
+    </p>
+  
+    <p>
+      Although there were some hardware limitations: multiplexer wiring stability, OLED and heart rate sensor update frequency, the squat detection system designed in this project succeeded in demonstrating real-time monitoring and feedback capabilities of the squat. Proposed future work consists in expanding the dataset, migrating microcontroller to a model that can deploy TinyML framework, and improve sensor fusion to enhance performance in a wider range of fitness and rehabilitation environments.
+    </p>
+  
+    <p>
+      <strong>Keywords:</strong> Applied Machine Learning, Machine Learning, Deep Learning; Inertial Measurement Unit; Squat classification; SVM; LSTM; Transformer
+    </p>
+  </div>
+  
+
+  <h2>Application</h2>
+  <img src="images/diagram.jpg" alt="Diagram" width="1000" />
+
+  <h2>Concept Design</h2>
+  <img src="images/overview1.jpg" alt="Concept" width="1000" />
+
+  <h2>Implementation</h2>
+  <img src="images/implementation.jpg" alt="Implementation" width="1000" />
+
+  <h2>Video</h2>
+  <video width="1000" controls>
+    <source src="videos/demo.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <h2>Requested Files</h2>
+  
+  <ul>
+    <li><a href="design/OLED_Base_v2 v1.stl" download>OLED Base Design File (.stl)</a></li>
+    <li><a href="design/IMU Case TKoL v2.stl" download>IMU Base Design File (.stl)</a></li>
+    <li><a href="code/Final_TKoL_v2.ino" download>Arduino Code (.ino)</a></li>
+    <li><a href="code/The_King_of_Limbs_Trained_v3.ipynb" download>Real Time Code (.ipynb)</a></li>
+    <li><a href="code/TKoL_collected_data.csv" download>Collected data (.csv)</a></li>
+    <li><a href="code/78_1.h5" download>Trained model (.h5)</a></li>
+    <li><a href="code/fitted_scaler1.pkl" download>Fitted Scaler (.pkl)</a></li>
+    <li><a href="code/The_King_of_Limbs_LSTM_v1.ipynb" download>LSTM Training Code (.ipynb)</a></li>
+    <li><a href="code/TraningTransformer-Copy1.ipynb" download>Transformer Training Code (.ipynb)</a></li>
+    <li><a href="slides/TKoL_Final_Presentation.pptx" download>Presentation Slides (.pptx)</a></li>
+  </ul>
+</body>
+</html>
